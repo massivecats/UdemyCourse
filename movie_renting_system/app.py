@@ -17,9 +17,9 @@ import json
 # print(user.movies)
 
 new_user = User('Lia')
-new_user.add_movie('Field Notes', 'Porn')
-new_user.add_movie('Spreequell', 'Porn')
-new_user.add_movie('Cherry', 'Rule 34 Porn')
+new_user.add_movie('Field Notes', 'Fantasy')
+new_user.add_movie('Spreequell', 'Sci-Fi')
+new_user.add_movie('Cherry', 'Documentary')
 
 # print(new_user.movies)
 

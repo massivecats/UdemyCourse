@@ -32,7 +32,7 @@ student = {
 """
 def create_student_list():
     user_input_name = input(str("Yo, gimme the name: "))
-    user_input_marks = input("And how 'bout dem marks, separate by commas: ")
+    user_input_marks = input("And the marks, separate by commas: ")
     user_marks = user_input_marks.split(",")
 
     student_data = {

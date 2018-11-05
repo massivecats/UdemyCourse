@@ -2,7 +2,7 @@
 # print(numbers)
 # print(numbers.split(","))
 #
-# user_input = input("Yo, brah. Enter your numbers, seperated by commas: ")
+# user_input = input("Yo. Enter your numbers, seperated by commas: ")
 # user_numbers = user_input.split(",")
 # user_numbers_int = []
 #
