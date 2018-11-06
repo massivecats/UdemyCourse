@@ -22,6 +22,11 @@ class User:
         # if movie.watched is true, add it to the list, return list
         return list(filter(lambda movie: movie.watched, self.movies))
 
+    def set_watched(self, name):
+        for movie in self.movies:
+            if movie.name == name:
+                movie.watched = True
+
     def json(self):
         return {
             'name': self.name,
@@ -29,6 +34,21 @@ class User:
                 movie.json() for movie in self.movies
             ]
         }
+
+    # {"name": "Mia", "movies": [{"name": "Rotkaeppchen", "genre": "Fantasy", "watched": false},
+    #                            {"name": "Die Schoene und das Biest", "genre": "Fantasy", "watched": false}]}
+
+    @classmethod
+    def user_from_json(cls, json_data):
+        user_name = json_data['name']
+        movies = []
+
+        for movie_data in json_data['movies']:
+            movies.append(Movie.from_json(movie_data))
+
+        user = User(user_name)
+        user.movies = movies
+        return user
 
     # def save_to_file(self):
     #     with open("{}.txt".format(self.name), "w") as file:
